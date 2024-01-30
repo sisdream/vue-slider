@@ -31,9 +31,7 @@
 let slides = new Vue ({
     el : '#app',
      data : {
-        // counter to change active
         slideActive : 0,
-        // objects array to create carousel
         slides: [
             {
                 image : 'img/01.webp',
@@ -63,8 +61,7 @@ let slides = new Vue ({
         ],
     },
     methods: {
-        
-        // function to go to the next image
+        // NEXT IMAGE
         nextImg: function() {
             if(this.slideActive < this.slides.length - 1){
                 this.slideActive++;
@@ -72,7 +69,7 @@ let slides = new Vue ({
                 this.slideActive = 0;
             }
         },
-        // function to go to the previous image
+        //PREV IMAGE
         prevImg: function() {
             if(this.slideActive === 0){
                 this.slideActive = this.slides.length - 1;
